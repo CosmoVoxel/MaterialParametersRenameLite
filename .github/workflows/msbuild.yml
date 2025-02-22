@@ -3,12 +3,12 @@ name: Build Unreal Engine Plugin
 on:
   push:
     tags:
-      - "v*"  # Runs when a new version tag is pushed (e.g., v1.0)
-  workflow_dispatch:  # Allows manual triggering
+      - "v*"  # Запуск при публикации версии (например, v1.0)
+  workflow_dispatch:  # Ручной запуск
 
 jobs:
   build:
-    runs-on: windows-latest  # Uses Windows since UE5 requires it
+    runs-on: Eric-Cartman-Local  # Запускаем на самодельном runner
 
     steps:
       - name: Checkout Repository
@@ -18,19 +18,27 @@ jobs:
         run: |
           echo "UE_PATH=C:\Program Files\Epic Games\UE_5.5" >> $GITHUB_ENV
           echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $GITHUB_ENV
+          echo "OUTPUT_DIR=${{ github.workspace }}\BuildOutput" >> $GITHUB_ENV
 
       - name: Build Plugin using UAT
-        shell: cmd
+        shell: powershell
         run: |
-          "C:\Program Files\Epic Games\UE_5.5\Engine\Build\BatchFiles\RunUAT.bat" ^
-          BuildPlugin ^
-          -Plugin="%PLUGIN_PATH%\MaterialParametersRenameLite.uplugin" ^
-          -Package="%GITHUB_WORKSPACE%\BuildOutput" ^
-          -TargetPlatforms=Win64 ^
-          -NoHostPlatform
+          $runUatPath = "${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat"
+          $pluginPath = "${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin"
+          $outputDir = "${{ env.OUTPUT_DIR }}"
+
+          $command = "& `"$runUatPath`" BuildPlugin " +
+                    "-Plugin=`"$pluginPath`" " +
+                    "-Package=`"$outputDir`" " +
+                    "-TargetPlatforms=Win64 " +
+                    "-NoHostPlatform"
+
+          Write-Output "Executing command: $command"
+
+          Invoke-Expression $command
 
       - name: Archive Build Output
-        run: Compress-Archive -Path ${{ github.workspace }}\BuildOutput -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
+        run: Compress-Archive -Path ${{ env.OUTPUT_DIR }} -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
 
       - name: Upload Artifact (for debugging)
         uses: actions/upload-artifact@v4
