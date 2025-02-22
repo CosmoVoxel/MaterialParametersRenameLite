@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: Eric-Cartman-Local  # Запускаем на самодельном runner
+    runs-on: self-hosted  # Запускаем на самодельном runner
 
     steps:
       - name: Checkout Repository
