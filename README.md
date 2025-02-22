@@ -27,6 +27,12 @@ This plugin is designed to make material and parameter management faster, easier
 
 ---
 
+## 📷 **Preview** 📷
+
+https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
+
+---
+
 ## 🛠️ **Supported Platforms** 🛠️
 
 - 🖌️ **Materials**  
