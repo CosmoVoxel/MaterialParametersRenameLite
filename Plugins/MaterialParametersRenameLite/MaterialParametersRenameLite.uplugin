@@ -3,21 +3,16 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "MaterialParametersRenameLite",
-	"Description": "Easy to use Plugin for renaming material parameters",
-	"Category": "Other",
+	"Description": "A plugin for material parameter renaming.",
+	"Category": "Editor",
 	"CreatedBy": "Eric Cartman",
-	"CreatedByURL": "",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"IsExperimentalVersion": false,
-	"Installed": false,
+	"CanContainContent": true,
 	"Modules": [
 		{
 			"Name": "MaterialParametersRenameLite",
-			"Type": "Runtime",
+			"Type": "Editor",
 			"LoadingPhase": "PreLoadingScreen"
 		}
 	]
