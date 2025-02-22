@@ -1,0 +1,14 @@
+﻿/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-MaterialParametersRenameLite.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Unreal Engine 5 Projects\DevelopingPlugins\Intermediate\Build\Win64\x64\DevelopingPluginsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Unreal Engine 5 Projects\DevelopingPlugins\Plugins\MaterialParametersRenameLite\Intermediate\Build\Win64\x64\UnrealEditor\Development\MaterialParametersRenameLite\Module.MaterialParametersRenameLite.cpp.obj"
+"C:\Unreal Engine 5 Projects\DevelopingPlugins\Plugins\MaterialParametersRenameLite\Intermediate\Build\Win64\x64\UnrealEditor\Development\MaterialParametersRenameLite\MaterialParametersRenameLite.cpp.obj"
+"C:\Unreal Engine 5 Projects\DevelopingPlugins\Plugins\MaterialParametersRenameLite\Intermediate\Build\Win64\x64\UnrealEditor\Development\MaterialParametersRenameLite\ParameterRenamerLiteBPLibrary.cpp.obj"
+"C:\Unreal Engine 5 Projects\DevelopingPlugins\Plugins\MaterialParametersRenameLite\Intermediate\Build\Win64\x64\UnrealEditor\Development\MaterialParametersRenameLite\Default.rc2.res"
+/OUT:"C:\Unreal Engine 5 Projects\DevelopingPlugins\Plugins\MaterialParametersRenameLite\Intermediate\Build\Win64\x64\UnrealEditor\Development\MaterialParametersRenameLite\UnrealEditor-MaterialParametersRenameLite.lib"

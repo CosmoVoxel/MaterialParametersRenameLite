@@ -1,0 +1,12 @@
+﻿{
+	"RemapUnityFiles": 
+	{
+		"Module.MaterialParametersRenameLite.cpp.obj": [
+			"MaterialParametersRenameLite.cpp.obj",
+			"ParameterRenamerLiteBPLibrary.cpp.obj",
+			"MaterialParametersRenameLite.init.gen.cpp.obj",
+			"ParameterRenamerLiteBPLibrary.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj"
+		]
+	}
+}

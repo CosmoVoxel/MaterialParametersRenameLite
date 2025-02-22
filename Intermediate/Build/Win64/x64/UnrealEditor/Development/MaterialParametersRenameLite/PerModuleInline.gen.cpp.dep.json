@@ -1,0 +1,14 @@
+﻿{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unreal engine 5 projects\\developingplugins\\plugins\\materialparametersrenamelite\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\materialparametersrenamelite\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unreal engine 5 projects\\developingplugins\\intermediate\\build\\win64\\x64\\developingpluginseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\unreal engine 5 projects\\developingplugins\\plugins\\materialparametersrenamelite\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\materialparametersrenamelite\\definitions.materialparametersrenamelite.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

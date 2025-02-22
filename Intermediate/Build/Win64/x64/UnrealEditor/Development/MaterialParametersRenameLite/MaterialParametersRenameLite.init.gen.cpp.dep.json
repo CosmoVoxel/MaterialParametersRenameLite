@@ -1,0 +1,13 @@
+﻿{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unreal engine 5 projects\\developingplugins\\plugins\\materialparametersrenamelite\\intermediate\\build\\win64\\unrealeditor\\inc\\materialparametersrenamelite\\uht\\materialparametersrenamelite.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unreal engine 5 projects\\developingplugins\\intermediate\\build\\win64\\x64\\developingpluginseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\unreal engine 5 projects\\developingplugins\\plugins\\materialparametersrenamelite\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\materialparametersrenamelite\\definitions.materialparametersrenamelite.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
