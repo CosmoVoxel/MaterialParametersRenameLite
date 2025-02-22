@@ -25,9 +25,22 @@ jobs:
         shell: powershell
         run: Get-Content $env:GITHUB_ENV
 
-      - name: Print UE_PATH in PowerShell
+      - name: Build Plugin using UAT
         shell: powershell
         run: |
-          Write-Host "The UE_PATH is: $env:UE_PATH"
+          $runUatPath = "${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat"
+          $pluginPath = "${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin"
+          $outputDir = "${{ env.OUTPUT_DIR }}"
+
+          $command = "& `"$runUatPath`" BuildPlugin " +
+                    "-Plugin=`"$pluginPath`" " +
+                    "-Package=`"$outputDir`" " +
+                    "-TargetPlatforms=Win64 " +
+                    "-NoHostPlatform"
+
+          Write-Output "Executing command: $command"
+
+          Invoke-Expression $command
+
 
         
