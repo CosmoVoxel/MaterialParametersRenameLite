@@ -1,0 +1,37 @@
+name: Build Unreal Engine Plugin
+
+on:
+  push:
+    tags:
+      - "v*"  # Запуск при создании тега версии
+  workflow_dispatch:  # Возможность ручного запуска
+
+jobs:
+  build:
+    runs-on: windows-latest  # Используем Windows
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: ENV_SETUP
+          echo "UE_PATH=C:\Program Files\Epic Games\UE_5.5" >> $GITHUB_ENV
+          echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $GITHUB_ENV
+
+      - name: Building
+        run: |
+          "&${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin ^
+            -Plugin="${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin" ^
+            -Package="${{ github.workspace }}\BuildOutput" ^
+            -TargetPlatforms=Win64 ^
+            -NoHostPlatform
+
+      - name: ZIPING
+        run: Compress-Archive -Path ${{ github.workspace }}\BuildOutput -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
+
+      - name: Загрузка в релиз (если тег создан)
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          files: MaterialParametersRenameLite.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
