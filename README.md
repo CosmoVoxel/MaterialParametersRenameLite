@@ -7,7 +7,7 @@ This plugin is designed to make material and parameter management faster, easier
 
 ## ✨ **Key Features** ✨
 
-- **One-Click Magic**: Right-click on any material, select your desired modifier, and you're done! 🪄  
+- 🪄 **One-Click Magic**: Right-click on any material, select your desired modifier, and you're done! 
 - 🗨️ **Names & Groups**: Rename **ALL** parameter names or group names in just **ONE CLICK**.  
 - ➕ **Prefix & Postfix**: Add prefixes or postfixes to your parameters with ease. 🔠  
 - 🔍 **FindAndRename**: Quickly locate and rename parameters in seconds. ✨  
