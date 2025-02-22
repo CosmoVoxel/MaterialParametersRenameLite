@@ -1,5 +1,7 @@
 name: Build Unreal Engine Plugin
 
+permissions:
+  contents: write
 
 on:
   push:
