@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "UE_PATH=C:\Program Files\Epic Games\UE_5.5" >> $env:GITHUB_ENV
           echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $env:GITHUB_ENV
-          echo "OUTPUT_DIR=${{ github.workspace }}\MaterialParametersRenameLite" >> $env:GITHUB_ENV
+          echo "OUTPUT_DIR=${{ github.workspace }}\Build" >> $env:GITHUB_ENV
       
       - name: Debug GITHUB_ENV contents
         shell: powershell
