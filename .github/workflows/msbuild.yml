@@ -3,35 +3,42 @@ name: Build Unreal Engine Plugin
 on:
   push:
     tags:
-      - "v*"  # Запуск при создании тега версии
-  workflow_dispatch:  # Возможность ручного запуска
+      - "v*"  # Runs when a new version tag is pushed (e.g., v1.0)
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   build:
-    runs-on: windows-latest  # Используем Windows
+    runs-on: windows-latest  # Uses Windows since UE5 requires it
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: ENV_SETUP
+      - name: Set Environment Variables
+        run: |
           echo "UE_PATH=C:\Program Files\Epic Games\UE_5.5" >> $GITHUB_ENV
           echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $GITHUB_ENV
 
-      - name: Building
+      - name: Build Plugin using UAT
         run: |
-          "&${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin ^
-            -Plugin="${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin" ^
-            -Package="${{ github.workspace }}\BuildOutput" ^
-            -TargetPlatforms=Win64 ^
+          &"${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin `
+            -Plugin="${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin" `
+            -Package="${{ github.workspace }}\BuildOutput" `
+            -TargetPlatforms=Win64 `
             -NoHostPlatform
 
-      - name: ZIPING
+      - name: Archive Build Output
         run: Compress-Archive -Path ${{ github.workspace }}\BuildOutput -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
 
-      - name: Загрузка в релиз (если тег создан)
+      - name: Upload Artifact (for debugging)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Plugin-Build
+          path: ${{ github.workspace }}\MaterialParametersRenameLite.zip
+
+      - name: Upload to GitHub Releases (if a version tag is pushed)
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/v')
         with:
-          files: MaterialParametersRenameLite.zip
+          files: ${{ github.workspace }}\MaterialParametersRenameLite.zip
           token: ${{ secrets.GITHUB_TOKEN }}
