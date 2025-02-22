@@ -21,11 +21,13 @@ jobs:
 
       - name: Build Plugin using UAT
         run: |
-          &"${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin `
-            -Plugin="${{ env.PLUGIN_PATH }}\MaterialParametersRenameLite.uplugin" `
-            -Package="${{ github.workspace }}\BuildOutput" `
-            -TargetPlatforms=Win64 `
-            -NoHostPlatform
+          Start-Process -FilePath "`"$env:UE_PATH\Engine\Build\BatchFiles\RunUAT.bat`"" `
+            -ArgumentList "BuildPlugin", `
+            "-Plugin=`"$env:PLUGIN_PATH\MaterialParametersRenameLite.uplugin`"", `
+            "-Package=`"${{ github.workspace }}\BuildOutput`"", `
+            "-TargetPlatforms=Win64", `
+            "-NoHostPlatform" `
+            -NoNewWindow -Wait
 
       - name: Archive Build Output
         run: Compress-Archive -Path ${{ github.workspace }}\BuildOutput -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
