@@ -8,13 +8,15 @@
 - 🔍 **FindAndRename**: Quickly find and rename parameters with ease. ✨  
 - 🔄 **Overwrite**: Overwrite existing parameter names/groups for full control. 🔄
 
+![Screenshot 2025-02-22 172343](https://github.com/user-attachments/assets/3ca89f23-d376-457e-8d0c-6d63bcdfbce1)
+
+
 **Supported Platforms**:  
 - 🖌️ **Materials**  
 - ⚙️ **Material Functions**
 
 Fully **Blueprint-driven**, with the core written in C++ for **optimal performance**. 💪
 
-![Screenshot 2025-02-22 172343](https://github.com/user-attachments/assets/3ca89f23-d376-457e-8d0c-6d63bcdfbce1)
 
 ## How to Install in Unreal Engine 5.5:
 1. **Download the Plugin** from the [GitHub repository](#). 📥  
