@@ -20,8 +20,8 @@ jobs:
           echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $GITHUB_ENV
           echo "OUTPUT_DIR=${{ github.workspace }}\BuildOutput" >> $GITHUB_ENV
 
-      - name: Print Name
+      - name: Build Plugin using UAT
         shell: powershell
         run: |
-          run: echo $env:PLUGIN_PATH
-          
+          echo $env:PLUGIN_PATH
+        
