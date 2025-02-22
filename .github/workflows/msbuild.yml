@@ -20,14 +20,14 @@ jobs:
           echo "PLUGIN_PATH=${{ github.workspace }}\Plugins\MaterialParametersRenameLite" >> $GITHUB_ENV
 
       - name: Build Plugin using UAT
+        shell: cmd
         run: |
-          Start-Process -FilePath "`"$env:UE_PATH\Engine\Build\BatchFiles\RunUAT.bat`"" `
-            -ArgumentList "BuildPlugin", `
-            "-Plugin=`"$env:PLUGIN_PATH\MaterialParametersRenameLite.uplugin`"", `
-            "-Package=`"${{ github.workspace }}\BuildOutput`"", `
-            "-TargetPlatforms=Win64", `
-            "-NoHostPlatform" `
-            -NoNewWindow -Wait
+          "C:\Program Files\Epic Games\UE_5.5\Engine\Build\BatchFiles\RunUAT.bat" ^
+          BuildPlugin ^
+          -Plugin="%PLUGIN_PATH%\MaterialParametersRenameLite.uplugin" ^
+          -Package="%GITHUB_WORKSPACE%\BuildOutput" ^
+          -TargetPlatforms=Win64 ^
+          -NoHostPlatform
 
       - name: Archive Build Output
         run: Compress-Archive -Path ${{ github.workspace }}\BuildOutput -DestinationPath ${{ github.workspace }}\MaterialParametersRenameLite.zip
