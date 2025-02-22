@@ -28,11 +28,7 @@ jobs:
         shell: powershell
         run: Get-Content $env:GITHUB_ENV
 
-      - name: Set Long Path Support
-        shell: powershell
-        run: New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
-
-      - name: Build Plugin using UAT
+      - name: Build Plugin
         shell: powershell
         run: |
           $runUatPath = "${{ env.UE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat"
