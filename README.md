@@ -14,7 +14,7 @@
 
 Fully **Blueprint-driven**, with the core written in C++ for **optimal performance**. 💪
 
-> "With great power comes great responsibility."
+![Screenshot 2025-02-22 172343](https://github.com/user-attachments/assets/3ca89f23-d376-457e-8d0c-6d63bcdfbce1)
 
 ## How to Install in Unreal Engine 5.5:
 1. **Download the Plugin** from the [GitHub repository](#). 📥  
