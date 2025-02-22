@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
 
 ## 🚀 **How to Install in Unreal Engine 5.5** 🚀
 
-1. **Download the Plugin** from the [Release]([#](https://github.com/CosmoVoxel/MaterialParametersRenameLite/releases)). 📥  
+1. **Download the Plugin** from the [latest release](https://github.com/CosmoVoxel/MaterialParametersRenameLite/releases/latest). 📥
 2. **Extract** the plugin folder into your project’s `Plugins` directory. 🗂️  
 3. **Enable the Plugin** in the **Plugins window** (located in the Edit menu). 🔧  
 4. **Restart** the editor to complete the installation. 🔄  
