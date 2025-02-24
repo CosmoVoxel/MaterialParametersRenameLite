@@ -5,6 +5,12 @@ This plugin is designed to make material and parameter management faster, easier
 
 ---
 
+## 📷 **Preview** 📷
+
+https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
+
+---
+
 ## ✨ **Key Features** ✨
 
 - 🪄 **One-Click Magic**: Right-click on any material, select your desired modifier, and you're done! 
@@ -24,12 +30,6 @@ This plugin is designed to make material and parameter management faster, easier
 
 ![blpr](https://github.com/user-attachments/assets/a16afaaf-dbd8-4b5e-87df-8538c81df8c3)  
 *Blueprint-driven workflow for seamless integration.*
-
----
-
-## 📷 **Preview** 📷
-
-https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
 
 ---
 
