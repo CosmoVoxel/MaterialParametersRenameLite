@@ -62,7 +62,7 @@ https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
 
 ## 📊 **GitHub Repository Stats** 📊
 
-⭐ **Stars**: [![GitHub Stars](https://img.shields.io/github/stars/your-repo?style=social)](https://github.com/your-repo)  
+⭐ **Stars**: [![GitHub Stars](https://img.shields.io/github/stars/your-repo?style=social)](https://github.com/CosmoVoxel/MaterialParametersRenameLite)  
 👀 **Views**: ![](https://komarev.com/ghpvc/?username=CosmoVoxel)  
 
 ---
