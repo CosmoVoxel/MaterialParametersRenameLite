@@ -1,6 +1,5 @@
 # 🎉 **Release V1.0 - MaterialParametersRenameLite Plugin for Unreal Engine 5.5** 🎉
 
-**The wait is over!** The official **V1.0** release of the **MaterialParametersRenameLite** plugin is here, and it’s ready to revolutionize your Unreal Engine workflow! 🚀  
 This plugin is designed to make material and parameter management faster, easier, and more intuitive than ever before. Whether you're a seasoned developer or just starting out, **MaterialParametersRenameLite** is here to simplify your life. Let’s dive in! 🌟
 
 ---
@@ -69,7 +68,6 @@ https://github.com/user-attachments/assets/162337b8-7e3f-4b7c-b7da-81415b8338f9
 
 ## 🚧 **Upcoming Features** 🚧
 
-We’re just getting started! Here’s what’s coming next:  
 - **Batch Renamer**: Rename parameters across multiple parameters/groups at once.  
 - **Instance Support**: Rename parameters even for **instances**.  
 - **Material Editor Integration**: Integration into the Material Editor.  
